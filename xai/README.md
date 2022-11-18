@@ -1,8 +1,6 @@
-# Explainable AI for Affective Computing
+# Notebooks for Explainable AI in Affective Computing
 
-SoSe2022 Bielefeld University
-
-In this seminar we will learn about the latest research in eXplainable AI (XAI) and its application for the field of affective computing.  This reposity will contain a series of [Jupyter Notebooks](https://jupyter.org/) to give you practical experience using various Python toolkits.
+This reposity contains contain a series of [Jupyter Notebooks](https://jupyter.org/) to give you practical experience using various Python toolkits for Explanability in AC.
 
 ## Installation Instructions
 
@@ -26,11 +24,14 @@ To create a new virutal env for this seminar, run the following commands from yo
 	- `conda activate xai_ac`
 3. Install the required Python packages
 	- `conda install -c conda-forge jupyterlab scikit-learn matplotlib pandas seaborn`
+    - `pip install dice-ml`
+    - `pip install alibi[shap]`
+        - or if you receive an error `pip install "alibi[shap]"`
 
 
 ## Getting Started with the Notebooks
 
-### Clone the Seminar GitHub Repo
+### Clone the GitHub Repo
 
 All notebooks during the semester will be provided through this GitHub repository.  The easiest way to obtain the notebooks is to `clone` this repository, and then perfrom a `git pull` when we announce that new notebooks are available. Here I will provide terminal instructions to clone and pull the repo, but you are free to use your preferred GUI or Git interface.
 
@@ -57,48 +58,3 @@ For this seminar, we will use [JupyterLab](https://jupyterlab.readthedocs.io/en/
 	- Go to the "Launcher" tab and click the Python icon in the "Notebook" section
 3. To open an existing notebook
 	- In the file explorer pane on the left, browse to an `.ipynb` file and doubleclick it
-
-### Validate Your Virtual Environmenmt Installation
-
-To validate your virtual env installation, and make sure you are able to run a simple notebook
-
-1. In JupyterLab, open `validate_installation.ipynb`
-2. Follow the instructions in the Notebook
-
-
-### (Optional) Intro to ML Notebook
-
-As an example, you can also familiarize yourself with the Notebook we will use in our first lecture: `intro_ml.ipynb`
-
-## Notebook 1 Instructions - Simplification and Feature Attribution
-
-*This section assumes you've already gone through all above steps.*
-
-1. Pull the most recent updates from the reposititory by running `git pull` from your local repository. 
-2. Activate your conda env, `conda activate xai_ac`.
-3. Download necessary models from LernraumPlus, section [Practical Notebook I](https://lernraumplus.uni-bielefeld.de/course/view.php?id=12564&section=7).
-    1. Extract to the `models` folder in your local repository
-4. Install the following Python Packages:
-    1. [Tensorflow](https://www.tensorflow.org/install): `pip install tensorflow` (there is no training so a GPU is not needed)  
-    2. [LIME](https://github.com/marcotcr/lime): `pip install lime`
-
-5. Run Jupyter Lab: `jupyter lab`
-6. Open `Notebooks/1. simplification_attribution.ipynb` 
-7. Complete the tasks as described in the Notebook.
-
-
-## Notebook 2 Instructions - Counterfactual Explanations and More
-
-*This section assumes you've already gone through all above steps (including Notebook 1 instructions).*
-
-1. Pull the most recent updates from the reposititory by running `git pull` from your local repository. 
-2. Activate your conda env, `conda activate xai_ac`.
-
-4. Install the following Python Packages:
-    1. `pip install dice-ml`
-    2. `pip install alibi[shap]`
-        - or if you receive an error `pip install "alibi[shap]"`
-
-5. Run Jupyter Lab: `jupyter lab`
-6. Open `Notebooks/2. XAI for AC Notebook.ipynb` 
-7. Complete the tasks as described in the Notebook.
